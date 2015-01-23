@@ -17,6 +17,7 @@
 // $array = array(1,3,5,7,9);
 // 	var_dump($array)
 
+for ($i=0;$i<5; $i++){
 
 function create_image()
 {
@@ -41,11 +42,11 @@ function create_image()
 
 	imagejpeg($image);
 
-	// imagedestroy($image);
+	imagedestroy($image);
 
 }
 echo create_image();
-
+}
 
 
 ?>

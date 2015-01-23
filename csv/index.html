@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<?php ini_set('auto_detect_line_endings',true);
+	$file=fopen('us-500.csv','r');
+	$header =fgetcsv($file);
+	$counter = 0;
+	while(($line=fgetcsv($file)) !== FALSE) {
+	$counter ++;
+		?>
+		<h1>Record<?=$recordcounter?></h1>
+		<ul>
+			<l1>First Name:<?=$line[0];?></li>
+			<l1>Last Name:<?=$line[1];?></li>
+			<l1>Company Name:<?=$line[2];?></li>
+			<l1>Address:<?=$line[3];?></li>
+			<l1>City:<?=$line[4];?></li>
+			<l1>County:<?=$line[5];?></li>
+			<l1>State:<?=$line[6];?></li>
+			<l1>Zip:<?=$line[7];?></li>
+			<l1>Phone:<?=$line[8];?></li>
+			<l1>Phone 2:<?=$line[9];?></li>
+			<l1>Email:<?=$line[10];?></li>
+			<l1>Web:<?=$line[11];?></li>
+		</ul>
+
+	<?php 
+	
+	} 
+fclose($file);
+	?>
+
+</body>
+</html>
